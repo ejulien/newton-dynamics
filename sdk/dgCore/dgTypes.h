@@ -143,7 +143,9 @@
 
 // uncomment this for Scalar floating proint 
 // alternatively the end application can use a command line option to enable this define
-//#define DG_SCALAR_VECTOR_CLASS
+#ifdef _IS_CROSS_COMPILING
+	#define DG_SCALAR_VECTOR_CLASS
+#endif
 
 // by default newton run on a separate thread and 
 // optionally concurrent with the calling thread,
