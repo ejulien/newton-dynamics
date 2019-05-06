@@ -87,7 +87,7 @@ if (UNIX)
             COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
     endif()
 
-	if(NOT CMAKE_CROSSCOMPILING)
+	if(CMAKE_CROSSCOMPILING)
 		add_definitions(-D_IS_CROSS_COMPILING)
 	else()
 		add_compile_options(-msse3)
