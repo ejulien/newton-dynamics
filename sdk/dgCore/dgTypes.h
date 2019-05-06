@@ -114,7 +114,7 @@
 
 	#include <unistd.h>
 	#include <assert.h>
-	#ifndef __ARMCC_VERSION
+	#if !defined (__ARMCC_VERSION) && !defined (_IS_CROSS_COMPILING)
 		extern "C" 
 		{ 
 			// for SSE3 and up
