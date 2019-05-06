@@ -524,7 +524,9 @@ dgFloatExceptions::dgFloatExceptions(dgUnsigned32 mask)
 			fesetenv(FE_DFL_DISABLE_SSE_DENORMS_ENV);
 		#endif
 	#else
-		_MM_SET_FLUSH_ZERO_MODE(_MM_FLUSH_ZERO_ON);
+		#ifndef _IS_CROSS_COMPILING
+			_MM_SET_FLUSH_ZERO_MODE(_MM_FLUSH_ZERO_ON);
+		#endif
 	#endif
 
 //	float a (1.0f);
