@@ -34,7 +34,7 @@ if (MSVC)
       endif()
 endif(MSVC)
 
-target_include_directories(${projectName} PUBLIC .)
+target_include_directories(${projectName} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:.>)
 if (NEWTON_BUILD_PROFILER)
     target_link_libraries (${projectName} dProfiler)
 endif()
