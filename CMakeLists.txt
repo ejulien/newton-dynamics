@@ -23,9 +23,6 @@ option("NEWTON_WITH_AVX2_PLUGIN" "adding avx2 parallel solver (forces shared lib
 option("NEWTON_BUILD_SHARED_LIBS" "build shared library" OFF)
 option("NEWTON_BUILD_CORE_ONLY" "build the core newton library only" OFF)
 
-set(CMAKE_CONFIGURATION_TYPES Debug Release)
-set(CMAKE_DEBUG_POSTFIX "_d")
-
 project(NewtonSDK)
 
 set(CMAKE_CXX_STANDARD 11)
